@@ -1,0 +1,45 @@
+priority -50
+
+# Javascript snippets
+
+# logger
+snippet info "logger.info" b
+logger.info("$0")
+endsnippet
+
+snippet error "logger.error" b
+logger.error("$0")
+endsnippet
+
+snippet warn "logger.warn" b
+logger.warn("$0")
+endsnippet
+
+snippet debug "logger.debug" b
+logger.debug("$0")
+endsnippet
+
+# if and only if
+snippet iff "if and only if" b
+if ($1 && $1 !== undefined) {
+	$2
+}
+endsnippet
+
+# callback on error
+snippet ife "immediately return callback on error" b
+if (${1:err}) return callback($1);
+endsnippet
+
+# Same thing with braces
+snippet iferr "immediately return callback on error with braces" b
+if (${1:err}) {
+	return callback($1);
+}
+endsnippet
+
+snippet afn "anonymous function" b
+function (${1:arg}) {
+	$2
+}
+endsnippet
